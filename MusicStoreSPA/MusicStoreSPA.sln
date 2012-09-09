@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Web
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicStoreSPA", "MusicStoreSPA\MusicStoreSPA.csproj", "{04772A0B-D3B1-4292-8723-991EC94C3BA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicStoreSPA.Tests", "MusicStoreSPA.Tests\MusicStoreSPA.Tests.csproj", "{CC8E7E79-E87E-4DC9-9AE8-A23423CCEADD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{DDA02B5A-8306-48C0-AED3-00B9A12DFB19}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{04772A0B-D3B1-4292-8723-991EC94C3BA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04772A0B-D3B1-4292-8723-991EC94C3BA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04772A0B-D3B1-4292-8723-991EC94C3BA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04772A0B-D3B1-4292-8723-991EC94C3BA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC8E7E79-E87E-4DC9-9AE8-A23423CCEADD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC8E7E79-E87E-4DC9-9AE8-A23423CCEADD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC8E7E79-E87E-4DC9-9AE8-A23423CCEADD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC8E7E79-E87E-4DC9-9AE8-A23423CCEADD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDA02B5A-8306-48C0-AED3-00B9A12DFB19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDA02B5A-8306-48C0-AED3-00B9A12DFB19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDA02B5A-8306-48C0-AED3-00B9A12DFB19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDA02B5A-8306-48C0-AED3-00B9A12DFB19}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
