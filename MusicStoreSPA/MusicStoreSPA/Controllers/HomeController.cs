@@ -1,4 +1,5 @@
 ﻿using DataAccess;
+using MusicStoreSPA.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,16 +10,17 @@ namespace MusicStoreSPA.Controllers
 {
     public class HomeController : Controller
     {
-        protected IDummyDependency DummyRepo;
-        public HomeController(IDummyDependency dummyRepo)
+        protected IMusicLibraryService MusicLibrary;
+        public HomeController(IMusicLibraryService musicLibrary)
         {
-            DummyRepo = dummyRepo;
+            MusicLibrary = musicLibrary;
         }
 
         public ActionResult Index()
         {
             ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
-            ViewBag.Message = DummyRepo.DummyMethod();
+            var song = MusicLibrary.GetSong(1);
+            ViewBag.Message = song.Title;
 
             return View();
         }

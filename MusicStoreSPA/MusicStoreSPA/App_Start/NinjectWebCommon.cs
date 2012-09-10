@@ -11,6 +11,7 @@ namespace MusicStoreSPA.App_Start
     using Ninject;
     using Ninject.Web.Common;
     using DataAccess;
+    using MusicStoreSPA.Services;
 
     public static class NinjectWebCommon 
     {
@@ -54,7 +55,12 @@ namespace MusicStoreSPA.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
-            kernel.Bind<IDummyDependency>().To<DummyDependency>();
+            kernel.Bind<IArtistRepository>().To<ArtistRepository>().InSingletonScope();
+            kernel.Bind<IAlbumRepository>().To<AlbumRepository>().InSingletonScope();
+            kernel.Bind<ISongRepository>().To<SongRepository>().InSingletonScope();
+            kernel.Bind<IGenreRepository>().To<GenreRepository>().InSingletonScope();
+
+            kernel.Bind<IMusicLibraryService>().To<MusicLibraryService>();
         }        
     }
 }
