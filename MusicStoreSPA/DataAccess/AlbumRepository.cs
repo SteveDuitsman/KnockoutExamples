@@ -8,8 +8,8 @@ namespace DataAccess
 {
     public interface IAlbumRepository
     {
-        IQueryable<Album> All();
-        IQueryable<Album> Where(Predicate<Album> filter);
+        IEnumerable<Album> All();
+        IEnumerable<Album> Where(Predicate<Album> filter);
         Album FirstOrDefault(Predicate<Album> filter);
     }
 
@@ -34,8 +34,8 @@ namespace DataAccess
 
     public interface IGenreRepository
     {
-        IQueryable<Genre> All();
-        IQueryable<Genre> Where(Predicate<Genre> filter);
+        IEnumerable<Genre> All();
+        IEnumerable<Genre> Where(Predicate<Genre> filter);
         Genre FirstOrDefault(Predicate<Genre> filter);
     }
 

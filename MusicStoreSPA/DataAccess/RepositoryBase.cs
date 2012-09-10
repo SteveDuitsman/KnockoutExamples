@@ -10,14 +10,14 @@ namespace DataAccess
     {
         protected List<T> data = new List<T>();
 
-        public IQueryable<T> All()
+        public IEnumerable<T> All()
         {
-            return data as IQueryable<T>;
+            return data;
         }
 
-        public IQueryable<T> Where(Predicate<T> filter)
+        public IEnumerable<T> Where(Predicate<T> filter)
         {
-            return data.Where(d => filter.Invoke(d)) as IQueryable<T>;
+            return data.Where(d => filter.Invoke(d));
         }
 
         public T FirstOrDefault(Predicate<T> filter)

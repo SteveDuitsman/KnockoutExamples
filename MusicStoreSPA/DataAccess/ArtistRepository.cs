@@ -8,8 +8,8 @@ namespace DataAccess
 {
     public interface IArtistRepository
     {
-        IQueryable<Artist> All();
-        IQueryable<Artist> Where(Predicate<Artist> filter);
+        IEnumerable<Artist> All();
+        IEnumerable<Artist> Where(Predicate<Artist> filter);
         Artist FirstOrDefault(Predicate<Artist> filter);
     }
 

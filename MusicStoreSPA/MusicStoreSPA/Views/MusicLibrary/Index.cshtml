@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "Music Library";
+}
+@section scripts {
+    @Scripts.Render(
+        "~/Scripts/ViewModels/MusicLibraryViewModel.js",
+        "~/Scripts/koExternalTemplateEngine.js"
+    )
+}
+
+<h2>Music Library</h2>
+
+<div>
+    @*<ul data-bind="template: {name: 'ArtistListItem', foreach: Artists}"></ul>*@
+    <ul data-bind="foreach: Artists">
+        <li>
+            <span data-bind="text: Name"></span>
+            @*<a data-bind="text: Name" />*@
+            @*<a data-bind="text: Name, click: LoadAlbums(Id)" />*@
+        </li>
+    </ul>
+</div>
+
+<div>
+    <pre data-bind="text: JSON.stringify(ko.toJS($data), null, 2)"></pre>
+</div>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        //ko.externaljQueryTemplateEngine.setOptions({
+        //    templateUrl: "~/Views/Templates",
+        //    templateSuffix: ".tpl.html"
+        //});
+
+        var loadArtistsUrl = '@Url.Action("GetArtists", "MusicLibrary")';
+        var viewModel = new MusicLibraryViewModel({
+            LoadArtistsUrl: loadArtistsUrl
+        });
+        ko.applyBindings(viewModel);
+        viewModel.LoadArtists();
+    });
+</script>

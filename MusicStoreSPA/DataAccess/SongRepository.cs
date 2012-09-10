@@ -8,7 +8,7 @@ namespace DataAccess
 {
     public interface ISongRepository
     {
-        IQueryable<Song> Where(Predicate<Song> filter);
+        IEnumerable<Song> Where(Predicate<Song> filter);
         Song FirstOrDefault(Predicate<Song> filter);
     }
 
